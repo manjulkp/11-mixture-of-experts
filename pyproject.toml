@@ -1,0 +1,16 @@
+[project]
+name = "mixture-of-experts"
+version = "0.1.0"
+description = "Add a toy mixture of experts to the Tiny GPT and compare it with dense layers"
+requires-python = ">=3.12"
+dependencies = ["tiny-gpt"]
+
+[tool.uv.sources]
+tiny-gpt = { path = "../04-tiny-gpt", editable = true }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
